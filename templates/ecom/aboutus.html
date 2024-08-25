@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Simple E-commerce</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body style="background-color:#f7f7f7;">
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+<h3 style="text-align:center;">"Welcome to ShopEase, your ultimate online shopping destination! 
+  We are dedicated to bringing you a wide range of high-quality products, from the latest trends in fashion to must-have tech gadgets. At ShopEase, we believe in making your shopping experience as easy and enjoyable as possible.
+
+  Our team is passionate about sourcing the best products at competitive prices, ensuring you get the best value for your money.
+   We take pride in our commitment to customer satisfaction, offering fast shipping, secure payment options, and top-notch customer service.
+  
+  Thank you for choosing ShopEase—
+  we’re excited to be a part of your shopping journey!" </h3>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include "ecom/footer.html" %}
+</body>
+<!--
+developed By : Fazeema
+-->
+
+</html>
